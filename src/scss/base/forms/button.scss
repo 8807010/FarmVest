@@ -10,7 +10,8 @@
   background-color: #23B123;
   border-radius: rem(10);
   transition: all 0.3s ease 0s;
-  @media(any-hover: hover){
+
+  @media(any-hover: hover) {
     &:hover {
       background-color: #1b8b1b;
 
@@ -24,12 +25,22 @@
 
     @media(any-hover: hover) {
       &:hover {
-        background-color: #1b2327;
+        border: 1px solid $greenColor;
+        color: $greenColor;
+        background-color: transparent;
       }
     }
   }
 
   &._fw {
     width: 100%;
+  }
+
+  @media(max-width: $tablet) {
+    padding: rem(15) rem(20);
+
+    &_border {
+      padding: rem(14) rem(20);
+    }
   }
 }
