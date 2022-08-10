@@ -1,26 +1,25 @@
 // Заголовки, общие БЄМ блоки и проче...
 .page {
 
-  &__main {
-  }
+  &__main {}
 }
 
 .title {
-  font-weight: 700;
-  line-height: math.div(78, 70);
+  font-weight: 600;
+  line-height: math.div(65, 70);
   font-size: rem(70);
   color: #FFFFFF;
+  @include adaptiveValue("font-size", 70, 45);
 
   span {
     color: $greenColor;
   }
 }
- //=============================================================
+
+//=============================================================
 .form {
 
-  &__input {
-  }
+  &__input {}
 
-  &__button {
-  }
+  &__button {}
 }
