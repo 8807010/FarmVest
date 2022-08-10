@@ -2,9 +2,11 @@
 
 .main-block {
 
-  &__container {
+  &__container-big {
     position: relative;
   }
+
+  &__container {}
 
   &__content {
     @include adaptiveValue("padding-top", 250, 130);
@@ -50,20 +52,42 @@
 .icons-main-block {
 
   &__item {
+    position: absolute;
 
-    &_1 {}
+    &_1 {
+      top: percent(675, 974);
+      left: rem(15);
+    }
 
-    &_2 {}
+    &_2 {
+      top: percent(380, 974);
+      left: percent(237, 1620);
+    }
 
-    &_3 {}
+    &_3 {
+      top: percent(757, 974);
+      left: percent(403, 1620);
+    }
 
-    &_4 {}
+    &_4 {
+      top: percent(134, 974);
+      left: percent(1149, 1620);
+    }
 
-    &_5 {}
+    &_5 {
+      top: percent(367, 974);
+      left: percent(1325, 1620);
+    }
 
-    &_6 {}
+    &_6 {
+      top: percent(776, 974);
+      left: percent(1321, 1620);
+    }
 
-    &_7 {}
+    &_7 {
+      top: percent(380, 974);
+      right: rem(15);
+    }
   }
 }
 
