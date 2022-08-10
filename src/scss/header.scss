@@ -27,7 +27,27 @@
       max-width: 100%;
     }
 
-    
+    &::before,
+    &::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      border: 1px solid #fff;
+      @include adaptiveValue("width", 585, 350);
+      @include adaptiveValue("height", 585, 350);
+    }
+
+    &::before {
+      transform: translate(calc(-50% - rem(28)), -50%);
+    }
+
+    &::after {
+      top: 0;
+      transform: translate(calc(-50% + rem(27)), calc(-50% - rem(55)));
+    }
   }
 
   &__menu {}
