@@ -1,1 +1,26 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page {
+
+  &__main {
+  }
+}
+
+.title {
+  font-weight: 700;
+  line-height: math.div(78, 70);
+  font-size: rem(70);
+  color: #FFFFFF;
+
+  span {
+    color: $greenColor;
+  }
+}
+ //=============================================================
+.form {
+
+  &__input {
+  }
+
+  &__button {
+  }
+}
