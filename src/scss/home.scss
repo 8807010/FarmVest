@@ -113,14 +113,40 @@
     &_1 {
       &::before {
         transform: translate(calc(-50% - rem(28)), -37%);
-}
+      }
     }
 
     &_2 {
       &::before {
         transform: translate(calc(-50% + rem(27)), -46%);
 
+      }
+    }
+  }
 }
+
+//====================================================================================================
+
+.partners {
+  @include adaptiveValue("padding-bottom", 200, 30);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(25);
+
+    @media (max-width: em(1100)) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    img {
+      max-width: 100%;
     }
   }
 }
