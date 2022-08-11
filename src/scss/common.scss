@@ -3,8 +3,9 @@
 
   &__main {}
 
-  &__partners {
-  }
+  &__partners {}
+
+  &__how {}
 }
 
 //=============================================================
@@ -16,15 +17,77 @@
   color: #FFFFFF;
   @include adaptiveValue("font-size", 70, 45);
 
+  &_s64 {
+    @include adaptiveValue("font-size", 64, 40);
+  }
+
   span {
     color: $greenColor;
   }
 }
 
 //=============================================================
-.form {
 
-  &__input {}
-
-  &__button {}
+.text {
+  line-height: 180%;
 }
+
+//=============================================================
+
+
+.image-block {
+  display: flex;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: rem(20);
+  @include adaptiveValue("padding-top", 165, 30);
+  @include adaptiveValue("padding-bottom", 165, 30);
+  @include adaptiveValue("padding-left", 45, 30);
+  @include adaptiveValue("padding-right", 45, 30);
+  position: relative;
+
+  &__circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      @include adaptiveValue("width", 585, 350);
+      @include adaptiveValue("height", 585, 350);
+      top: 0;
+      right: 0;
+    }
+
+    &_1 {
+      &::before {
+        transform: translate(calc(50% - rem(18)), -20%);
+      }
+    }
+
+    &_2 {
+      &::before {
+        transform: translate(calc(50% - rem(20)), -6%);
+      }
+    }
+  }
+
+  &__item {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1 1 100%;
+
+    img {
+      max-width: 100%;
+      border-radius: rem(20);
+    }
+  }
+}
+
+//=============================================================

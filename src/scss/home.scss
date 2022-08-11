@@ -12,7 +12,7 @@
     position: relative;
     z-index: 2;
     @include adaptiveValue("padding-top", 250, 130);
-    @include adaptiveValue("padding-bottom", 200, 30);
+    @include adaptiveValue("padding-bottom", 200, 50);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,6 @@
   }
 
   &__text {
-    line-height: 180%;
     max-width: rem(570);
 
     &:not(:last-child) {
@@ -128,7 +127,7 @@
 //====================================================================================================
 
 .partners {
-  @include adaptiveValue("padding-bottom", 200, 30);
+  @include adaptiveValue("padding-bottom", 200, 50);
 
   &__container {
     display: flex;
@@ -150,5 +149,93 @@
     }
   }
 }
+
+//====================================================================================================
+
+.how {
+  @include adaptiveValue("padding-bottom", 100, 25);
+
+  &__container {
+    display: grid;
+    row-gap: rem(30);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr percent(750, 1420);
+    }
+  }
+
+  &__content {
+    @include adaptiveValue("padding-right", 95, 30, 1420, 992, 2);
+
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
+
+  }
+
+  &__title {
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+
+  &__steps {}
+
+  &__image {
+    align-self: start;
+  }
+}
+
+.steps-how {
+
+  &__item {
+    max-width: rem(490);
+    display: flex;
+    align-items: flex-start;
+    gap: rem(32);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    border-radius: 50%;
+    flex: 0 0 rem(110);
+    height: rem(110);
+    width: rem(110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 128, 0, 0.1);
+  }
+
+  &__body {}
+
+  &__title {
+    font-size: rem(20);
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__text {}
+}
+
 
 //====================================================================================================
