@@ -5,8 +5,15 @@
   left: 0;
   width: 100%;
   z-index: 50;
+  transition: all 0.3s ease 0s;
   @include adaptiveValue("padding-top", 60, 10);
   @include adaptiveValue("padding-bottom", 60, 10);
+
+  &._header-scroll {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 
   &__container-big {
     display: grid;
@@ -25,28 +32,6 @@
 
     img {
       max-width: 100%;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      border-radius: 50%;
-      top: 0;
-      left: 0;
-      border: 1px solid #fff;
-      @include adaptiveValue("width", 585, 350);
-      @include adaptiveValue("height", 585, 350);
-    }
-
-    &::before {
-      transform: translate(calc(-50% - rem(28)), -50%);
-    }
-
-    &::after {
-      top: 0;
-      transform: translate(calc(-50% + rem(27)), calc(-50% - rem(55)));
     }
   }
 
