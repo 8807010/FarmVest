@@ -38,6 +38,7 @@
 
 
 .image-block {
+  align-self: start;
   display: flex;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
@@ -50,20 +51,21 @@
 
   &__circle {
     position: absolute;
-    width: 100%;
-    height: 100%;
+
     top: 0;
-    left: 0;
+    right: 0;
+    @include adaptiveValue("width", 585, 350);
+    @include adaptiveValue("height", 585, 350);
 
     &::before {
       content: "";
       position: absolute;
       border-radius: 50%;
       border: 1px solid #fff;
-      @include adaptiveValue("width", 585, 350);
-      @include adaptiveValue("height", 585, 350);
       top: 0;
-      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     &_1 {
