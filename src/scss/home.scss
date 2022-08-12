@@ -170,7 +170,6 @@
     @media (max-width: $mobileSmall) {
       text-align: center;
     }
-
   }
 
   &__title {
@@ -236,6 +235,40 @@
 
   &__text {}
 }
+
+
+//====================================================================================================
+
+.pathway {
+  @include adaptiveValue("padding-top", 100, 25);
+  @include adaptiveValue("padding-bottom", 100, 25);
+
+  &__container {
+    display: grid;
+    row-gap: rem(30);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: percent(694, 1420) 1fr;
+    }
+
+    &_big {}
+  }
+ 
+  &__image {}
+
+  &__content {
+    @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
+
+    // @media (max-width: $mobileSmall) {
+    //   text-align: center;
+    // }
+  }
+
+  &__title {}
+
+  &__text {}
+}
+
 
 
 //====================================================================================================
