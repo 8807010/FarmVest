@@ -1,0 +1,14 @@
+.footer {
+  background: rgba(53, 64, 70, 0.5);
+}
+.main-footer {
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: repeat(3, 1fr);
+}
+.main-footer__form {
+  justify-self: center;
+}
+.main-footer__contacts {
+  justify-self: end;
+}
