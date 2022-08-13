@@ -166,10 +166,6 @@
 
   &__content {
     @include adaptiveValue("padding-right", 95, 30, 1420, 992, 2);
-
-    @media (max-width: $mobileSmall) {
-      text-align: center;
-    }
   }
 
   &__title {
@@ -191,6 +187,9 @@
 }
 
 .steps-how {
+  @media (max-width: $mobileSmall) {
+    text-align: center;
+  }
 
   &__item {
     max-width: rem(490);
@@ -254,6 +253,10 @@
 
   &__image {
     flex: 0 0 percent(694, 1420);
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
 
     .image-block__circle {
       top: auto;
@@ -344,6 +347,7 @@
 
   &__body {
     padding: rem(0) rem(30) rem(24) rem(30);
+
     @media (max-width: $mobileSmall) {
       padding: rem(0) rem(20) rem(18) rem(20);
     }
@@ -351,6 +355,88 @@
 }
 
 //==================================================================================================
+
+.why {
+
+  // .why__container-big
+  @include adaptiveValue("padding-top", 100, 25);
+  @include adaptiveValue("padding-bottom", 100, 25);
+
+  &__container {
+    display: grid;
+    row-gap: rem(30);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr percent(680, 1420);
+    }
+  }
+
+  &__content {
+    @include adaptiveValue("padding-right", 177, 30, 1420, 992, 2);
+  }
+
+  &__title {
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+
+  &__steps {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 55, 30);
+    }
+  }
+
+  // .why__button
+
+  &__button {
+    min-width: rem(222);
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  // .why__image
+
+  &__image {
+    padding: 0;
+  }
+}
+
+.steps-why {
+  list-style-type: none;
+  counter-reset: item;
+  display: grid;
+  @include adaptiveValue("gap", 48, 20);
+
+  &__item {
+    font-size: rem(20);
+    line-height: math.div(55, 20);
+    display: flex;
+    @include adaptiveValue("gap", 48, 20);
+
+
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      border-radius: 50%;
+      width: rem(64);
+      height: rem(64);
+      background: rgba(255, 255, 255, 0.05);
+      font-size: rem(36);
+      text-align: center;
+      line-height: rem(70);
+      font-weight: 600;
+    }
+  }
+}
 
 
 
