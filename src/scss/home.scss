@@ -544,6 +544,11 @@
   &__image-ibg {
     padding-bottom: percent(377, 686);
     flex: 0 0 percent(300, 686);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   // .item-review__body

@@ -172,6 +172,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -196,6 +201,11 @@
   &__link {
     font-size: rem(14);
     line-height: math.div(16, 14);
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
