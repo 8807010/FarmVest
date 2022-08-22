@@ -6,17 +6,15 @@
 	"private": true,
 	"license": "",
 	"type": "module",
-  "homepage": "https://8807010.github.io/FarmVest",
 	"scripts": {
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
-		"build": "gulp build --build",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
+		"deploy": "gulp build && gh-pages -d build",
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
 		"tmp": "gulp -f gulpfile.tmp.js",
-		"bem": "fls-bemtree-from-html",
-    "deploy": "gulp build && gh-pages -d build"
+		"bem": "fls-bemtree-from-html"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "latest",
@@ -24,7 +22,6 @@
 		"del": "^6.1.1",
 		"file-include-webpack-plugin-replace": "latest",
 		"fls-bemtree-from-html": "^1.0.0",
-		"gh-pages": "^4.0.0",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
