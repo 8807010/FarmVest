@@ -16,8 +16,7 @@
 		"devbuild": "gulp build --build --nowebp",
 		"tmp": "gulp -f gulpfile.tmp.js",
 		"bem": "fls-bemtree-from-html",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gulp build && gh-pages -d build"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "latest",

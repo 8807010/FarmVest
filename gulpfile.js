@@ -15,7 +15,6 @@ global.app = {
   path: path,
   plugins: plugins
 }
-
 // Импорт задач
 import { reset } from "./config/gulp-tasks/reset.js";
 import { html } from "./config/gulp-tasks/html.js";
@@ -61,3 +60,10 @@ export { deployZIP }
 
 // Выполнение сценария по умолчанию
 gulp.task('default', development);
+
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+});
