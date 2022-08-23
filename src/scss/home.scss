@@ -661,3 +661,44 @@
 }
 
 //===================================================================================================
+
+
+.main__btn {
+  position: relative;
+}
+
+.main__action {
+  z-index: 100;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+}
+
+.main__theme {
+  width: 35px;
+  height: 35px;
+  background: url(./../img/icons/sun.svg);
+}
+
+.main__reset.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main__reset::before {
+  content: "x";
+  position: absolute;
+  bottom: 0;
+  left: 33px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  font-size: 9px;
+  border-radius: 50%;
+  line-height: 15px;
+  color: #fff;
+  text-align: center;
+  background-color: #666;
+}
+
+//===================================================================================================

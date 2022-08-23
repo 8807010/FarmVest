@@ -2,15 +2,17 @@
 	"name": "fls-start",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
+  "homepage": "https://8807010.github.io/FarmVest",
 	"author": "FLS",
 	"private": true,
 	"license": "",
 	"type": "module",
 	"scripts": {
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
+		"build": "gulp build --build",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
-		"deploy": "gulp build && gh-pages -d build",
+		"deploy": "gh-pages -d dist",
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
 		"tmp": "gulp -f gulpfile.tmp.js",
@@ -26,7 +28,6 @@
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
 		"gulp-fonter-fix": "latest",
-		"gulp-gh-pages": "^0.5.4",
 		"gulp-group-css-media-queries": "latest",
 		"gulp-if": "latest",
 		"gulp-imagemin": "latest",
@@ -70,6 +71,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"gh-pages": "^4.0.0",
 		"simplebar": "latest"
 	}
 }

@@ -62,7 +62,8 @@ export { deployZIP }
 // Выполнение сценария по умолчанию
 gulp.task('default', development);
 
-gulp.task('deploy', function() {
-    return gulp.src('./dist/**/*')
-        .pipe(ghPages());
-});
+
+
+
+
+
