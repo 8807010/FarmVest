@@ -14,4 +14,4 @@
 ✅ Валидация форм  
 
  
-[![FarmVest](https://github.com/8807010/FarmVest/blob/master/farmVest.jpg)](https://8807010.github.io/FarmVest/)
+[![FarmVest](https://github.com/8807010/FarmVest/blob/master/farmVest.jpg)](https://8807010.github.io/FarmVest/)  
